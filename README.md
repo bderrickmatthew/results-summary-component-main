@@ -53,7 +53,20 @@ Users should be able to:
 - I learned more of flexbox.
 - I also put more into practice of javascript.
 
-To see how you can add code snippets, see below:
+- I also learned how to draw a shape i.e a circle using css;
+
+```css
+.circle {
+    width: 145px;
+    height: 145px;
+    margin: 30px auto;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to bottom, var(--violetBlue), 30%,var(--persianBlue));
+    padding-top: 10px;
+    
+}
+```
 
 
 
@@ -66,7 +79,7 @@ To see how you can add code snippets, see below:
 
 - [hex 2 rgb(a) && hex 2 hsl(a)](https://tgomilar.github.io/hex2rgb/) - This helped me with colors.
 - [Box shadow css generator](https://cssgenerator.org/box-shadow-css-generator.html) - This helped me to generate box shadow.
-
+- [CSS Shapes Explained: How to Draw a Circle, Triangle, and More Using Pure CSS](https://www.freecodecamp.org/news/css-shapes-explained-how-to-draw-a-circle-triangle-and-more-using-pure-css/) - This helped me to to draw a shape particularly a circle.
 
 ## Author
 
