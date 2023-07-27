@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/*----------------------------*/
+
+:root {
+    /* Primary */
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeyYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --lightSlateBlue: hsl(252, 100%, 67%); /* (background) */
+    --lightRoyalBlue: hsl(241, 81%, 54%); /* (background) */
+
+    --violetBlue: hsla(256, 72%, 46%, 1); /* (circle) */
+    --persianBlue: hsla(241, 72%, 46%, 0);  /* (circle) */
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+
+    /*----BGs-----*/
+     --reactionBG: hsla(6, 100%, 98% , 1);
+     --memoryBG: hsla(42, 100%, 97% , 1);
+     --verbalBG: hsla(173, 53%, 97% , 1);
+     --visualBG: hsla(240, 71%, 97% , 1);
+     
+     --paleBlueAlt: hsl(221.5, 15.7%, 67.5%);
+     
+     
+}
+
+body {
+    font-family: "Hanken Grotesk", sans-serif;       
+    max-width: 375px;
+    display: inline;    
+}
+
+main {
+    width: 100%;  
+    margin: auto; 
+}
+
+p {
+    font-size: 18px;
+}
+
+.result {
+    width: 100%;
+    background: linear-gradient(to bottom, var(--lightSlateBlue), 30%, var(--lightRoyalBlue));
+    text-align: center;
+    color: var(--white);
+    border-radius: 0 0 35px 35px;
+    padding: 30px 40px 40px 40px;
+    
+}
+
+.result > *:first-child {
+    font-weight:500;
+    font-size: 18px;
+    color: var(--paleBlue);
+}
+
+
+.circle {
+    width: 145px;
+    height: 145px;
+    margin: 30px auto;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to bottom, var(--violetBlue), 30%,var(--persianBlue));
+    padding-top: 10px;
+    
+}
+
+.circle h1 {
+    font-weight:800;
+   font-size: 3.5rem;
+}
+
+.circle h4 {
+    font-weight: 500;
+    color: var(--paleBlue);
+}
+
+.result > *:nth-child(3) {
+    font-weight: 700;
+}
+
+.result > *:nth-child(4) {
+    font-weight:500;
+    font-size: 18px;
+    color: var(--paleBlue);
+}
+
+
+.hidden {
+     opacity: 0%;
+    
+}
+.visible {
+  opacity: 100%;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@keyframes shine {
+  0% { opacity: 1; } /* Start with full opacity */
+  50% { opacity: 0.5; color: var(--paleBlueAlt);} /* Reduce opacity in the middle */
+  100% { opacity: 1; } /* Bring back full opacity */
+}
+
+.shine {
+  animation: shine 2s linear 7; /* Adjust duration and timing as needed */
+}
+
+/* Summary */
+.summary {    
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    bottom: 30px;
+}
+
+.summary > *:first-child {
+    margin-top: 30px;
+    font-weight: 700;
+    color: var(--darkGrayBlue);
+}
+
+.summary article {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.reaction {
+    background: var(--reactionBG);
+}
+
+.memory {
+    background: var(--whiteAlt);
+}
+
+.verbal {
+    background: var(--verbalBG);
+}
+
+.visual {
+    background: var(--visualBG);
+}
+
+.reaction,
+.memory,
+.verbal,
+.visual {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;    
+}
+
+.reaction img,
+.memory img,
+.verbal img,
+.visual img {
+    margin-right: 15px;
+}
+
+.reaction h1,
+.memory h1,
+.verbal h1,
+.visual h1 {
+    flex: 1;
+    font-weight: 500;
+}
+
+.reaction h1 {
+    color: var(--lightRed);
+}
+
+.memory h1 {
+    color:var(--orangeyYellow);
+}
+
+.verbal h1 {
+    color: var(--greenTeal);
+}
+
+.visual h1 {
+    color: var(--cobaltBlue);
+}
+
+.summary article div p {
+    color: var(--lightLavender);
+    font-weight: 700;
+}
+
+p span {
+    font-weight: 800; 
+    color: var(--darkGrayBlue);
+}
+
+button {
+    width: 100%;
+    background-color: var(--darkGrayBlue);
+    color: var(--white);
+    border: none;
+    height: 55px;
+    border-radius: 30px;
+}
+
+button:hover, button:active {
+    background: linear-gradient(to bottom, var(--lightSlateBlue), 30%, var(--lightRoyalBlue));
+}
+
+/* attribution */
+.attribution {
+    padding: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* media queries */
+@media screen and (min-width: 768px) {
+    
+    body {
+        max-width: 1440px;
+        display: grid;
+        place-content: center;
+        padding: 20em;
+    }
+    
+    main {
+        display: flex;          
+    }
+
+    .result {
+        width: 350px;
+        border-radius: 35px;
+    }
+
+    .result > *:first-child {
+        font-weight:500;
+        font-size: 25px;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        padding-top: 30px;
+    }
+
+    .circle h1 {
+        font-weight:800;
+        font-size: 5rem;
+    }
+
+    .result > *:nth-child(3) {
+        
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .summary {
+        width: 450px;
+        padding-left: 80px;
+        padding-right: 40px;
+        bottom: 0;
+        right: 35px;
+        box-shadow: 1px 2px 9px 4px rgba(0, 0, 0, 0.048);
+        border-radius: 0 35px 35px 0;
+    }
+
+    .summary > *:first-child {
+        margin-top: unset;
+    }
+
+}
